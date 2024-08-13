@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/common/head :: head"><title>MessageRedirect</title></head>
+<body>
+<script th:inline="javascript">
+    var message = [[${message}]];
+    var url = [[${redirectUri}]];
+    alert(message);
+    document.location.href=url;
+</script>
+</body>
+</html>

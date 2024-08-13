@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mapper DTD 선언 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.haeyoon.library_core.mapper.BookInsertMapper">
+
+    <insert id="insertBooks" parameterType="Books" useGeneratedKeys="true" keyProperty="bookSeq">
+        INSERT INTO books (title, title_url, series_title, author, publisher, publisher_url, publish_predate,pre_price, real_price ,book_introduction, book_introduction_url, book_summary, book_summary_url, ea_isbn, ea_add_code, set_isbn, set_add_code, input_date, book_create_date, book_status, book_owner_seq, category_seq)
+        VALUES (#{title},#{titleUrl},#{seriesTitle},#{author},#{publisher},#{publisherUrl},#{publishPredate},#{prePrice},#{realPrice},#{bookIntroduction},#{bookIntroductionUrl},#{bookSummary},#{bookSummaryUrl},#{eaIsbn},#{eaAddCode},#{setIsbn},#{setAddCode},#{inputDate},#{bookCreateDate},#{bookStatus},#{bookOwnerSeq},#{categorySeq})
+    </insert>
+
+    <insert id="insertBookCategory" parameterType="BookCategory" keyProperty="categorySeq"
+            useGeneratedKeys="true">
+        INSERT INTO book_category (category_name) VALUES (#{categoryName})
+    </insert>
+</mapper>

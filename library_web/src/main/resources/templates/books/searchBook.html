@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" data-bs-theme="auto">
+<head th:replace="~{/common/head:: head}"><title></title></head>
+<head>
+    <meta charset="UTF-8">
+    <title>searchBook</title>
+</head>
+<body>
+<div class="main">
+    <h1>Book Information</h1>
+    <form th:action="@{/books/searchResult}" th:object="${searchObj}" method="get">
+
+        <div class="row">
+            <div class="col">
+                <label for="eaIsbn">ISBN: </label>
+                <input type="text" id="eaIsbn" th:field="*{eaIsbn}" th:errorclass="field-error" class="form-control"
+                       placeholder="ISBN 코드를 입력해주세요.">
+                <div class="field-error" th:errors="*{eaIsbn}"></div>
+            </div>
+            <button type="submit" class="btn w-100 btn-primary btn-lg">Search</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" data-bs-theme="auto">
+<head th:replace="~{/common/head:: head}"><title></title></head>
+<head>
+    <meta charset="UTF-8">
+    <title>searchResult</title>
+</head>
+<body>
+<div th:if="${books}">
+    <p><strong>TITLE:</strong> <span class="" th:text="${books.title}">TITLE</span></p>
+    <p><strong>TITLE_URL:</strong> <span th:text="${books.titleUrl}">TITLE_URL</span></p>
+    <p><strong>SERIES_TITLE:</strong> <span th:text="${books.seriesTitle}">SERIES_TITLE</span></p>
+    <p><strong>AUTHOR:</strong> <span th:text="${books.author}">AUTHOR</span></p>
+    <p><strong>PUBLISHER:</strong> <span th:text="${books.publisher}">PUBLISHER</span></p>
+    <p><strong>PUBLISHER_URL:</strong> <span th:text="${books.publisherUrl}">PUBLISHER_URL</span></p>
+    <p><strong>PUBLISH_PREDATE:</strong> <span th:text="${books.publishPredate}">PUBLISH_PREDATE</span></p>
+    <p><strong>PRE_PRICE:</strong> <span th:text="${books.prePrice}">PRE_PRICE</span></p>
+    <p><strong>REAL_PRICE:</strong> <span th:text="${books.realPrice}">REAL_PRICE</span></p>
+    <p><strong>BOOK_INTRODUCTION:</strong> <span th:text="${books.bookIntroduction}">BOOK_INTRODUCTION</span></p>
+    <p><strong>BOOK_INTRODUCTION_URL:</strong> <span th:text="${books.getBookIntroductionUrl}">BOOK_INTRODUCTION_URL</span></p>
+    <p><strong>BOOK_SUMMARY:</strong> <span th:text="${books.bookSummary}">BOOK_SUMMARY</span></p>
+    <p><strong>BOOK_SUMMARY_URL:</strong> <span th:text="${books.bookSummaryUrl}">BOOK_SUMMARY_URL</span></p>
+    <p><strong>EA_ISBN:</strong> <span th:text="${books.eaIsbn}">EA_ISBN</span></p>
+    <p><strong>EA_ADD_CODE:</strong> <span th:text="${books.eaAddCode}">EA_ADD_CODE</span></p>
+    <p><strong>SET_ISBN:</strong> <span th:text="${books.setIsbn}">SET_ISBN</span></p>
+    <p><strong>SET_ADD_CODE:</strong> <span th:text="${books.setAddCode}">SET_ADD_CODE</span></p>
+    <p><strong>INPUT_DATE:</strong> <span th:text="${books.inputDate}">INPUT_DATE</span></p>
+</div>
+</body>
+</html>
